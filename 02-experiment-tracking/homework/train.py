@@ -38,21 +38,5 @@ def run_train(data_path: str):
         rmse = mean_squared_error(y_val, y_pred, squared=False)
 
 
-
-# def run_train(data_path: str):
-#     try:
-#         print("Loading data...")
-#         X_train, y_train = load_pickle(os.path.join(data_path, "train.pkl"))
-#         X_val, y_val = load_pickle(os.path.join(data_path, "val.pkl"))
-
-#         rf = RandomForestRegressor(max_depth=10, random_state=0)
-#         print("Training model...")
-#         rf.fit(X_train, y_train)
-#         y_pred = rf.predict(X_val)
-#         rmse = mean_squared_error(y_val, y_pred, squared=False)
-#         print(f"RMSE: {rmse}")
-#     except Exception as e:
-#         print(f"An error occurred: {e}")
-
 if __name__ == '__main__':
     run_train()
