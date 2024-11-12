@@ -16,6 +16,9 @@ def load_data(*args, **kwargs):
     """
     This function gets the parquet data file and converts it into
     a Pandas dataframe
+
+    Returns:
+        The Pandas dataframe
     """
     response = requests.get(
                     'https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2023-03.parquet'
