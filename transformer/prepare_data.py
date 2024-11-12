@@ -12,7 +12,11 @@ def transform(data, *args, **kwargs):
     and generates a new column derived by subtracting the two
     formatted columns
 
-    Args: data: output from load_data.py
+    Args: 
+        data: output from load_data.py
+
+    Returns:
+        The DictVectorizer object and model
     """
 
     data.tpep_dropoff_datetime = pd.to_datetime(data.tpep_dropoff_datetime)
