@@ -1,16 +1,15 @@
-FROM python:3.9-slim
+FROM python:3.10-slim
 
-# setting the working directory
 WORKDIR /app
 
-# copying project files
-COPY . /app
+# Copying only the requirements file first
+COPY requirements.txt .
 
-# installing dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# exposing the Flask app port
+# Copying the rest of the application code
+COPY . .
+
 EXPOSE 5000
 
-# running the Flask app
-CMD ["python", "app.py"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]

@@ -1,0 +1,31 @@
+{
+  "os": "Windows-10-10.0.22631-SP0",
+  "python": "CPython 3.11.0",
+  "startedAt": "2025-01-15T14:47:05.098804Z",
+  "program": "C:\\Users\\anoth\\OneDrive - Ashesi University\\RGT\\mlops_zoomcamp\\07-project\\app.py",
+  "codePath": "07-project\\app.py",
+  "git": {
+    "remote": "https://github.com/NicoleNBruce/mlops_zoomcamp.git",
+    "commit": "00f547e352b1ea398574072001a9e216930eb239"
+  },
+  "email": "nicole@reallygreattech.com",
+  "root": "C:\\Users\\anoth\\OneDrive - Ashesi University\\RGT\\mlops_zoomcamp\\07-project",
+  "host": "DESKTOP-4FEUPUN",
+  "executable": "c:\\Users\\anoth\\OneDrive - Ashesi University\\RGT\\mlops_zoomcamp\\app_env\\Scripts\\python.exe",
+  "codePathLocal": "app.py",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "disk": {
+    "/": {
+      "total": "511087472640",
+      "used": "490714775552"
+    }
+  },
+  "memory": {
+    "total": "16441667584"
+  },
+  "cpu": {
+    "count": 6,
+    "countLogical": 12
+  }
+}
