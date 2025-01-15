@@ -1,0 +1,6 @@
+wandb
+joblib
+flask
+numpy
+gunicorn
+scikit-learn==1.5.1
