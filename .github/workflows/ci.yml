@@ -33,4 +33,4 @@ jobs:
 
     # Step 4: Run unit and integration tests
     - name: Run tests
-      run: pytest tests/
+      run: pytest 07-project/tests/
