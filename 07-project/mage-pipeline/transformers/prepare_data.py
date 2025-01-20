@@ -29,7 +29,7 @@ def transform(data, *args, **kwargs):
 
     #normalising the skewed features with sqrt transformation
     for i in numerical_columns:
-      data[f"Log_{i}"] = np.sqrt(data[i])
+        data[i] = np.sqrt(data[i])
 
     #encoding the target feature
     target = data['Air Quality'].map({'Moderate': 0, 'Good': 1, 'Hazardous': 2, 'Poor': 3})

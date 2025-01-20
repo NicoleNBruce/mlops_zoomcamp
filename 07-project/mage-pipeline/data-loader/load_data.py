@@ -8,7 +8,7 @@ import pandas as pd
 
 @data_loader
 def load_data(*args, **kwargs):
-     """
+    """
     This function gets the parquet data file and converts it into
     a Pandas dataframe
 
@@ -19,7 +19,7 @@ def load_data(*args, **kwargs):
         path = kagglehub.dataset_download("mujtabamatin/air-quality-and-pollution-assessment")
         path += '/updated_pollution_dataset.csv'
     except Exception as e:
-        return f{'error': str(e)}
+        return f'error: {str(e)}'
 
     data = pd.read_csv(path)
 
