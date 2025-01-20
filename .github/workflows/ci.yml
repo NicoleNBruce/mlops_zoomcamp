@@ -31,6 +31,9 @@ jobs:
         pip install --upgrade pip
         pip install -r 07-project/requirements.txt pytest
 
+    - name: Debug installed packages
+      run: python3 -m pip list
+
     # Step 4: Run unit and integration tests
     - name: Run tests
       run: python3 -m pytest tests/
