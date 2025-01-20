@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 import wandb
 import joblib
 import numpy as np
+import os
 
 # Log in to Weights & Biases
 wandb.login(key="18749c89b0fc53ef93f6d3a4054c5b45067b42cf")
@@ -9,11 +10,11 @@ wandb.login(key="18749c89b0fc53ef93f6d3a4054c5b45067b42cf")
 # Initialize a W&B run
 wandb.init(
     project="07-project",  
-    name="experiment_6",          
+    name="experiment_7",          
 )
 
 # loading the model artifact
-artifact = wandb.use_artifact("RFC:v2", type="model")
+artifact = wandb.use_artifact("RFC:v5", type="model")
 model_dir = artifact.download() 
 model_path = f"{model_dir}/random_forest_model.joblib"  # Adjust to the actual model filename 
 
@@ -30,5 +31,6 @@ def predict():
     return jsonify({'prediction': int(prediction[0])})  # Extract single prediction from array
 
 if __name__ == '__main__':
-    app.run( host="0.0.0.0", port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use the $PORT variable
+    app.run(host="0.0.0.0", port=port)
     wandb.finish()

@@ -1,0 +1,6 @@
+evidently
+pandas
+psycopg
+psycopg_binary
+kagglehub
+joblib
