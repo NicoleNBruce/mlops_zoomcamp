@@ -26,11 +26,15 @@ jobs:
     # Step 3: Install dependencies
     - name: Install dependencies
       run: |
-        python -m venv venv
-        source venv/bin/activate
         pip install --upgrade pip
-        pip install -r 07-project/requirements.txt
+        pip install -r 07-project/requirements.txt pytest
 
     # Step 4: Run unit and integration tests
     - name: Run tests
       run: pytest 07-project/tests/
+
+    - name: Debug environment
+      run: |
+        python --version
+        pip list
+  
